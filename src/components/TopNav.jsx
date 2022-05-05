@@ -31,13 +31,13 @@ const TopNav = () => {
           </Link>
         </>
       )}
-      {(auth.length != 0) && (
+      {(auth != null) && (
         <Link className="nav-link" to="/dashboard">
           Dashboard
         </Link>
       )}
 
-      {(auth.length != 0) && (
+      {(auth != null) && (
         <a className="nav-link pointer" onClick={logout}>
           Logout
         </a>
