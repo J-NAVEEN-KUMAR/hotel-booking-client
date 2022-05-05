@@ -31,7 +31,7 @@ const TopNav = () => {
           </Link>
         </>
       )}
-      {auth  && (
+      {(auth != null || auth != {})  && (
         <>
           <Link className="nav-link" to="/dashboard">
             Dashboard
