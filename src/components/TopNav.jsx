@@ -21,7 +21,7 @@ const TopNav = () => {
         Home
       </Link>
 
-      {auth === null && (
+      {(auth === null || auth === {}) && (
         <>
           <Link className="nav-link" to="/login">
             Login
@@ -31,16 +31,16 @@ const TopNav = () => {
           </Link>
         </>
       )}
-      {auth != null && (
-        <Link className="nav-link" to="/dashboard">
-          Dashboard
-        </Link>
-      )}
+      {auth  && (
+        <>
+          <Link className="nav-link" to="/dashboard">
+            Dashboard
+          </Link>
 
-      {auth != null && (
-        <a className="nav-link pointer" onClick={logout}>
-          Logout
-        </a>
+          <a className="nav-link pointer" onClick={logout}>
+            Logout
+          </a>
+        </>
       )}
     </div>
   );
