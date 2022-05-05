@@ -6,6 +6,7 @@ const TopNav = () => {
   const { auth } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
   const navigate = useHistory();
+  console.log(auth);
   const logout = () => {
     dispatch({
       type: "LOGOUT",
