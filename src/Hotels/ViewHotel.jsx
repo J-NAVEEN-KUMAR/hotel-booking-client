@@ -94,7 +94,7 @@ const ViewHotel = ({ match, history }) => {
             <br />
             <br />
             <p className="alert alert-info mt-3">
-              Note: Please populate card number with this number <strong>4242 4242 4242 4242</strong>
+              Note: Please populate card number with this number <strong>4242 4242 4242 4242</strong> during payment checkout.
             </p>
             <button
               onClick={handleClick}
