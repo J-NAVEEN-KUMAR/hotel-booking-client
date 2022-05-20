@@ -92,6 +92,10 @@ const ViewHotel = ({ match, history }) => {
               Posted by <strong>{hotel.postedBy && hotel.postedBy.name}</strong>
             </i>
             <br />
+            <br />
+            <p className="alert alert-info mt-3">
+              Note: Please populate card number with this number <strong>4242 4242 4242 4242</strong>
+            </p>
             <button
               onClick={handleClick}
               className="btn btn-block btn-lg btn-primary mt-3"
