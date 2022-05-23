@@ -37,7 +37,6 @@ const DashboardSeller = () => {
   };
 
   const createStripeAccount = async () => {
-    setLoading(true);
     try {
       window.open("https://dashboard.stripe.com/register", "_blank");
     } catch (error) {
