@@ -36,6 +36,16 @@ const DashboardSeller = () => {
     }
   };
 
+  const createStripeAccount = async () => {
+    setLoading(true);
+    try {
+      window.open("https://dashboard.stripe.com/register", "_blank");
+    } catch (error) {
+      console.log(error);
+      toast.error("Problem in creating stripe account.");
+    }
+  };
+
   const handleHotelDelete = (hotelId) => {
     if (!window.confirm("Are you sure want to delete the posted Hotel?"))
       return;
@@ -56,6 +66,15 @@ const DashboardSeller = () => {
               NJ Paradise Hotels partners with stripe to transfer earnings to
               your bank account
             </p>
+            <h4>Step 1</h4>
+            <button
+              disabled={loading}
+              onClick={createStripeAccount}
+              className="btn btn-primary mb-3"
+            >
+              {loading ? "Processing..." : "Create Stripe Account"}
+            </button>
+            <h4>Step 2</h4>
             <button
               disabled={loading}
               onClick={handleClick}
