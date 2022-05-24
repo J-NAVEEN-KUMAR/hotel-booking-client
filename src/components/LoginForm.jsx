@@ -8,9 +8,7 @@ const LoginForm = ({
   <form onSubmit={handleSubmit} className="mt-3">
     <p className="alert alert-info mt-3">
       <p>You can use these credentials to login</p>
-      <br />
       <p>Email: jerubandinaveen960@gmail.com</p>
-      <br />
       <p>Password: 1234567ui</p>
     </p>
     <div className="form-group m-3">
